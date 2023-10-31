@@ -34,6 +34,14 @@ namespace MapRussia.View
             TextBoxPlayer2.IsEnabled = false;
             TextBoxPlayer3.IsEnabled = false;
             TextBoxPlayer4.IsEnabled = false;
+
+            ButtonBack.Foreground = Brushes.Black;
+            ButtonStart.Foreground = Brushes.Black;
+            ButtonStartGeo.Foreground = Brushes.Black;
+            ButtonStartHistory.Foreground = Brushes.Black;
+            ButtonStartFacts.Foreground = Brushes.Black;
+            ButtonStartGeoHistory.Foreground = Brushes.Black;
+            ButtonStartHistoryFacts.Foreground = Brushes.Black;
         }
 
 
@@ -65,6 +73,15 @@ namespace MapRussia.View
                 ButtonStartGeoHistory.IsEnabled = true;
                 ButtonStartHistoryFacts.IsEnabled = true;
 
+                ButtonStart.Foreground = Brushes.Gold;
+                ButtonStartGeo.Foreground = Brushes.Gold;
+                ButtonStartHistory.Foreground = Brushes.Gold;
+                ButtonStartFacts.Foreground = Brushes.Gold;
+                ButtonStartGeoHistory.Foreground = Brushes.Gold;
+                ButtonStartHistoryFacts.Foreground = Brushes.Gold;
+                ButtonStartFactsGeo.Foreground = Brushes.Gold;
+
+
             }
             else
             {
@@ -75,6 +92,16 @@ namespace MapRussia.View
                 ButtonStartFactsGeo.IsEnabled = false;
                 ButtonStartGeoHistory.IsEnabled = false;
                 ButtonStartHistoryFacts.IsEnabled = false;
+
+                ButtonStart.Foreground = Brushes.Black;
+                ButtonStartGeo.Foreground = Brushes.Black;
+                ButtonStartHistory.Foreground = Brushes.Black;
+                ButtonStartFacts.Foreground = Brushes.Black;
+                ButtonStartGeoHistory.Foreground = Brushes.Black;
+                ButtonStartHistoryFacts.Foreground = Brushes.Black;
+                ButtonStartFactsGeo.Foreground = Brushes.Black;
+
+
             }
         }
 

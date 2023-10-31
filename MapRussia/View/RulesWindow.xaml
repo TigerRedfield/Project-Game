@@ -14,7 +14,7 @@
             <RowDefinition Height="0"/>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0" Background="Coral">
+        <Grid Grid.Row="0" Background="CornflowerBlue">
             <TextBlock Text="Правила игры"  Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource TitleFormat}"/>
         </Grid>
 

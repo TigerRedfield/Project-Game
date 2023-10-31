@@ -14,8 +14,8 @@
    
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0" Background="Coral">
-            <TextBlock Text="Игра"  Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource TitleFormat}"/>
+        <Grid Grid.Row="0" Background="CornflowerBlue">
+            <TextBlock Text="Игровое окно (вопросы по истории и интересным фактам)"  Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource TitleFormat}"/>
         </Grid>
 
         <Grid Grid.Row="1">
