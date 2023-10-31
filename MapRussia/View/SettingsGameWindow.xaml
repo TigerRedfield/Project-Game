@@ -1,0 +1,116 @@
+﻿<Window x:Class="MapRussia.View.SettingsGameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MapRussia.View"
+        mc:Ignorable="d"
+        Title="Интерактивная игра &quot;Что я знаю о России?&quot;" Height="340" Width="1250">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.50*"/>
+
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="Coral">
+            <TextBlock Text="Настройки игры"  Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource TitleFormat}"/>
+        </Grid>
+
+        <Grid Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.20*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Выберите команды и её название (участвовать должно как минимум 2 команды)" Style="{StaticResource  TextFormatDescription}"/>
+
+            <Grid Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0">
+                    <CheckBox x:Name="CheckPlayer1" Grid.Column="0" Checked="CheckPlayer1_Checked" Unchecked="CheckPlayer1_Unchecked" Margin="5,0,0,0"/>
+                    <TextBox x:Name="TextBoxPlayer1" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="0" Text="Команда 1" Width="Auto" Height="Auto" Margin="25,0,0,0" Style="{StaticResource  TextBoxFormat}"/>
+                    <Image Name="img1" Source="/Resources/player_1_not_active.png" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Grid.Column="0" Height="Auto" Width="Auto" Margin="30"/>
+                </Grid>
+
+
+                <CheckBox x:Name="CheckPlayer2" Grid.Column="1" Checked="CheckPlayer2_Checked" Unchecked="CheckPlayer2_Unchecked" Margin="5 0 0 0"/>
+                <TextBox x:Name="TextBoxPlayer2" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Text="Команда 2" Width="Auto" Height="Auto" Margin="25 0 0 0"  Style="{StaticResource TextBoxFormat}"/>
+                <Image Name="img2" Source="/Resources/player_2_not_active.png"  HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Grid.Column="1" Height="Auto" Width="Auto" Margin="30"/>
+
+                <CheckBox x:Name="CheckPlayer3" Grid.Column="2" Checked="CheckPlayer3_Checked" Unchecked="CheckPlayer3_Unchecked" Margin="5 0 0 0"/>
+                <TextBox x:Name="TextBoxPlayer3" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" Text="Команда 3" Width="Auto" Height="Auto" Margin="25 0 0 0" Style="{StaticResource TextBoxFormat}"/>
+                <Image Name="img3" Source="/Resources/player_3_not_active.png"  HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Grid.Column="2" Height="Auto" Width="Auto" Margin="30"/>
+
+                <CheckBox x:Name="CheckPlayer4" Grid.Column="3" Checked="CheckPlayer4_Checked" Unchecked="CheckPlayer4_Unchecked" Margin="5 0 0 0"/>
+                <TextBox x:Name="TextBoxPlayer4" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="3" Text="Команда 4" Width="Auto" Height="Auto" Margin="25 0 0 0" Style="{StaticResource TextBoxFormat}"/>
+                <Image Name="img4" Source="/Resources/player_4_not_active.png"  HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Grid.Column="3" Height="Auto" Width="Auto" Margin="30"/>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.5*"/>
+                <ColumnDefinition Width="0.3*"/>
+                <ColumnDefinition Width="1.5*"/>
+                <ColumnDefinition Width="1.5*"/>
+                <ColumnDefinition Width="1.5*"/>
+                <ColumnDefinition Width="1.5*"/>
+            </Grid.ColumnDefinitions>
+            
+              <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+
+            <Button x:Name="ButtonStartGeo" Grid.Column="2" Margin="5" Click="ButtonStartGeo_Click">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="География" Style="{StaticResource TextFormat}"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="ButtonStartHistory" Grid.Column="3" Margin="5" Click="ButtonStartHistory_Click">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="История" Style="{StaticResource TextFormat}"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="ButtonStartFacts" Grid.Column="4" Margin="5" Click="ButtonStartFacts_Click">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Интересный факты" Style="{StaticResource TextFormat}"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="ButtonStartGeoHistory" Grid.Row="1" Grid.Column="2" Margin="5" Click="ButtonStartGeoHistory_Click" >
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="География + История" Style="{StaticResource TextFormat}"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="ButtonStartHistoryFacts" Grid.Row="1" Grid.Column="3" Margin="5" Click="ButtonStartHistoryFacts_Click">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="История + Факты" Style="{StaticResource TextFormat}"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="ButtonStartFactsGeo" Grid.Row="1" Grid.Column="4" Margin="5" Click="ButtonStartFactsGeo_Click">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="География + Факты" Style="{StaticResource TextFormat}"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="ButtonStart" Grid.Column="5" Grid.Row="0" Grid.RowSpan="2" Margin="5" Click="ButtonStart_Click">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Все категории" Style="{StaticResource TextFormat}"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="ButtonBack" Grid.Row="0" Click="ButtonBack_Click" Grid.Column="0" Grid.RowSpan="2" Margin="5">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Назад в главное меню" Style="{StaticResource TextFormat}"/>
+                </StackPanel>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>
