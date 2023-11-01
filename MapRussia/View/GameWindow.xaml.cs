@@ -345,7 +345,7 @@ namespace MapRussia.View
                 if (TBAB.Text== TBA.Text)
                 {
                     MessageBox.Show("Ответ правильный!\n" + $"\n({TBAQ.Text.ToString()})");
-                    m_players[m_total_moving_player_id].Points++;
+                    m_players[m_total_moving_player_id].Points = m_players[m_total_moving_player_id].Points + 2;
                     NextQuestion();
                     NextPlayerMove();
                     TBAB.Text = "";

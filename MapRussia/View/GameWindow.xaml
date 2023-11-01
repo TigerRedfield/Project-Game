@@ -6,14 +6,14 @@
         xmlns:local="clr-namespace:MapRussia.View"
         mc:Ignorable="d"
         Title="Интерактивная игра &quot;Что я знаю о России?&quot;" Height="950" Width="1100" WindowState="Maximized" Loaded="Window_Loaded" >
-    
-    <Grid>
+
+    <Grid Background="Coral">
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
    
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0" Background="Coral">
+        <Grid Grid.Row="0" Background="CornflowerBlue">
             <TextBlock Text="Игровое окно (вопросы по всем темам)"  Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource TitleFormat}"/>
         </Grid>
 
@@ -76,13 +76,13 @@
                 </Grid>
             </Grid>
 
-            <Grid Grid.Row="1">
+            <Grid Grid.Row="1"  Background="Gold">
                 <TextBlock x:Name="TBA" Visibility="Hidden" Text="2asdd" HorizontalAlignment="Left" VerticalAlignment="Center" Style="{StaticResource TextFormatDescription}"/>
                 <TextBlock x:Name="TBAQ" Visibility="Hidden" Text="Дополнительной информации по этому вопросу нет" HorizontalAlignment="Right" VerticalAlignment="Center" Style="{StaticResource TextFormatDescription}"/>
                 <TextBlock x:Name="TBInfo" Text="Вопрос по " HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource TextFormatDescription}"/>
             </Grid>
 
-            <Grid Grid.Row="2">
+            <Grid Grid.Row="2" Background="Aqua">
                 <TextBlock x:Name="TBQ" Text="Нажмите на одну из трёх кнопок, чтобы появился вопрос." HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource TextFormatDescription}"/>
             </Grid>
 
@@ -96,10 +96,10 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="But1"  Grid.Column="0" Content="TextFormat" Background="#308" Foreground="White" Style="{StaticResource TextFormatBut}" Margin="20" Click="checkAnswerEvent" Tag="1"/>
-                <Button x:Name="But2"  Grid.Column="1" Content="TextFormat" Background="#308" Foreground="White" Style="{StaticResource TextFormatBut}" Margin="20" Click="checkAnswerEvent2" Tag="2"/>
-                <Button x:Name="But3"  Grid.Column="3" Content="TextFormat" Background="#308" Foreground="White" Margin="20" Click="checkAnswerEvent3" Tag="3" Style="{StaticResource TextFormatBut}"/>
-                <Button x:Name="But4"  Grid.Column="1" Content="Ответить" Background="#308" Foreground="White" Style="{StaticResource TextFormatBut}" Margin="20" Click="checkAnswerEvent4" Tag="2"/>
+                <Button x:Name="But1"  Grid.Column="0" Content="TextFormat" Background="#308" Foreground="Gold" Style="{StaticResource TextFormatBut}" Margin="20" Click="checkAnswerEvent" Tag="1"/>
+                <Button x:Name="But2"  Grid.Column="1" Content="TextFormat" Background="#308" Foreground="Gold" Style="{StaticResource TextFormatBut}" Margin="20" Click="checkAnswerEvent2" Tag="2"/>
+                <Button x:Name="But3"  Grid.Column="3" Content="TextFormat" Background="#308" Foreground="Gold" Margin="20" Click="checkAnswerEvent3" Tag="3" Style="{StaticResource TextFormatBut}"/>
+                <Button x:Name="But4"  Grid.Column="1" Content="Ответить" Background="#308" Foreground="Gold" Style="{StaticResource TextFormatBut}" Margin="20" Click="checkAnswerEvent4" Tag="2"/>
             </Grid>
 
 

@@ -23,5 +23,10 @@ namespace MapRussia.View
         {
             InitializeComponent();
         }
+
+        private void ButtonExit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

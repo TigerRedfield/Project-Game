@@ -35,7 +35,7 @@ namespace MapRussia.View
             TextBoxPlayer3.IsEnabled = false;
             TextBoxPlayer4.IsEnabled = false;
 
-            ButtonBack.Foreground = Brushes.Black;
+            ButtonStartFactsGeo.Foreground = Brushes.Black;
             ButtonStart.Foreground = Brushes.Black;
             ButtonStartGeo.Foreground = Brushes.Black;
             ButtonStartHistory.Foreground = Brushes.Black;

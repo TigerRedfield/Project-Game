@@ -5,13 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MapRussia.View"
         mc:Ignorable="d"
-        Title="Интерактивная игра &quot;Что я знаю о России?&quot;" Height="650" Width="400">
-    <Grid>
+        Title="Интерактивная игра &quot;Что я знаю о России?&quot;" Height="850" Width="800" MaxHeight="850" MinHeight="850" MaxWidth="800" MinWidth="800">
+    <Grid Background="Coral">
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="0"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="1.3*"/>
+            <RowDefinition Height="2.2*"/>
+            <RowDefinition Height="2.2*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="0.8*"/>
+            <RowDefinition Height="1.2*"/>
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0" Background="CornflowerBlue">
@@ -19,7 +22,33 @@
         </Grid>
 
         <Grid Grid.Row="1">
-            <TextBlock Text=""  Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <TextBlock Text="О чём игра?"  Grid.Column="1" VerticalAlignment="Top" Margin="2" HorizontalAlignment="Left" Style="{StaticResource TitleTextFormat}"/>
+            <TextBlock Text="Игровое приложение «Что я знаю о России?» представляет собой адаптацию одноимённой настольной игры в формате викторины, где игроки, разбившись на две-четыре команды, по очереди отвечают на вопросы, темы которых связаны с Россией. " VerticalAlignment="Top" HorizontalAlignment="Left" TextWrapping="Wrap" Style="{StaticResource TextFormatDescriptionRules}" Margin="0,34,0,0" Width="790"/>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <TextBlock Text="Как начать играть?"  Grid.Column="1" VerticalAlignment="Top" Margin="2" HorizontalAlignment="Left" Style="{StaticResource TitleTextFormat}"/>
+            <TextBlock Text="1. Чтобы начать играть нажмите на кнопку «Начать игру» в главном меню. &#10;2. Откроется окно «Настройки игры» и вам необходимо будет кликнуть на один из четырёх флажочков, чтобы поделиться на нужное количество команд. &#10;По желанию можно сменить название команды после нажатия на флажочек, набрав название в текстовом поле. &#10;3. Далее, если необходимое количество команд выбрано, надо нажать на одну из семи кнопок с назвванием нужной темы, чтобы открылось окно для начала игры." VerticalAlignment="Top" HorizontalAlignment="Left" TextWrapping="Wrap" Style="{StaticResource TextFormatDescriptionRules}" Margin="0,34,0,0" Width="790"/>
+        </Grid>
+
+        <Grid Grid.Row="3">
+            <TextBlock Text="Список тем"  Grid.Column="1" VerticalAlignment="Top" Margin="2" HorizontalAlignment="Left" Style="{StaticResource TitleTextFormat}"/>
+            <TextBlock Text="1. География - вопросы по географии.&#10;2. История - вопросы по истории&#10;3. Интересные факты - вопросы по интересным фактам&#10;4. География+История - вопросы по истории и географии&#10;5. История+Интересные факты - вопросы по истории и интересным фактам&#10;6. География+Интересные факты - вопросы по географии и интересным фактам&#10;7. Все категории - вопросы по географии, истории и интересным фактам" VerticalAlignment="Top" HorizontalAlignment="Left" TextWrapping="Wrap" Style="{StaticResource TextFormatDescriptionRules}" Margin="0,34,0,0" Width="790"/>
+        </Grid>
+
+        <Grid Grid.Row="4">
+            <TextBlock Text="Типы вопросов"  Grid.Column="1" VerticalAlignment="Top" Margin="2" HorizontalAlignment="Left" Style="{StaticResource TitleTextFormat}"/>
+            <TextBlock Text="1. Выбор одного из трёх вариантов ответа (А, Б, B) - одно очко. &#10;2. Закрытый вопрос (Да/Нет) - одно очко. &#10;3. Текстовый (Написать ответ вручную) - два очка." VerticalAlignment="Top" HorizontalAlignment="Left" TextWrapping="Wrap" Style="{StaticResource TextFormatDescriptionRules}" Margin="0,34,0,0" Width="790"/>
+        </Grid>
+        <Grid Grid.Row="5">
+            <TextBlock Text="Желаем вам приятной и познавательной игры!" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap" FontWeight="Bold" Style="{StaticResource TitleFormat}"/>
+        </Grid>
+        <Grid Grid.Row="6" Background="Coral">
+            <Button x:Name="ButtonExit" Background="#308" Foreground="Gold"  Grid.Column="1" Grid.Row="3"  Margin="100, 20" Click="ButtonExit_Click">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Закрыть окно" Style="{StaticResource TextFormat}" Margin=" 20, 0, 20, 0"/>
+                </StackPanel>
+            </Button>
         </Grid>
     </Grid>
 </Window>

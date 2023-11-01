@@ -6,14 +6,14 @@
         xmlns:local="clr-namespace:MapRussia"
         mc:Ignorable="d"
         Title="Интерактивная игра &quot;Что я знаю о России?&quot;" Height="400" Width="400">
-    <Grid>
+    <Grid Background="Coral">
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="0"/>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0" Background="Coral">
+        <Grid Grid.Row="0" Background="CornflowerBlue">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="50"/>
                 <ColumnDefinition Width="7*"/>
@@ -29,19 +29,19 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Button x:Name="ButtonStart"  Grid.Column="1" Grid.Row="1" Margin="100, 20" Click="ButtonStart_Click">
+            <Button x:Name="ButtonStart" Background="#308" Foreground="Gold" Grid.Column="1" Grid.Row="1" Margin="100, 20" Click="ButtonStart_Click">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Начать игру" Style="{StaticResource TextFormat}" Margin=" 20, 0, 20, 0"/>
                 </StackPanel>
             </Button>
 
-            <Button x:Name="ButtonRules"  Grid.Column="1" Grid.Row="2"  Margin="100, 20" Click="ButtonRules_Click">
+            <Button x:Name="ButtonRules" Background="#308" Foreground="Gold"   Grid.Column="1" Grid.Row="2"  Margin="100, 20" Click="ButtonRules_Click">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Правила игры" Style="{StaticResource TextFormat}" Margin=" 20, 0, 20, 0"/>
                 </StackPanel>
             </Button>
 
-            <Button x:Name="ButtonExit"  Grid.Column="1" Grid.Row="3"  Margin="100, 20" Click="ButtonExit_Click">
+            <Button x:Name="ButtonExit" Background="#308" Foreground="Gold"  Grid.Column="1" Grid.Row="3"  Margin="100, 20" Click="ButtonExit_Click">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Выйти из игры" Style="{StaticResource TextFormat}" Margin=" 20, 0, 20, 0"/>
                 </StackPanel>
