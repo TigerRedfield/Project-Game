@@ -74,5 +74,10 @@ namespace MapRussia
         {
             this.WindowState = WindowState.Minimized;
         }
+
+        private void ButtonQ_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Игра была разработана при участии следующих студентов 403 группы:\nВасильев Даниил\nЕмельянцев Никита\nЧерник Константин\n\nv.1.00");
+        }
     }
 }

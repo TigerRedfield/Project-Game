@@ -74,6 +74,8 @@ namespace MapRussia {
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "4.0.0.0")]
         public static void Main() {
+            SplashScreen splashScreen = new SplashScreen("resources/startquiz.png");
+            splashScreen.Show(true);
             MapRussia.App app = new MapRussia.App();
             app.InitializeComponent();
             app.Run();

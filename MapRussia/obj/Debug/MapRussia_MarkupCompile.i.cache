@@ -15,6 +15,6 @@ C:\4 Курс\MapRussia\MapRussia\App.xaml
 161507204429
 13-1310406943
 MainWindow.xaml;View\GameWindowGeo.xaml;View\GameWindowGeoFacts.xaml;View\GameWindowHistoryFacts.xaml;View\GameWindowGeoHistory.xaml;View\GameWindow.xaml;View\GameWindowFacts.xaml;View\GameWindowHistory.xaml;View\RulesWindow.xaml;View\SettingsGameWindow.xaml;
-
-False
+resources\startquiz.png
+True
 

@@ -15,20 +15,31 @@
 
         <Grid Grid.Row="0" Background="CornflowerBlue">
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.15*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="0.10*"/>
                 <ColumnDefinition Width="0.10*"/>
                 <ColumnDefinition Width="0.10*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="ButtonExitMenu" Grid.Column="3" Content="✖" Background="White" FontSize="8" Margin="0 10 5 10" Click="ButtonExit_Click"/>
-            <Button x:Name="ButtonHidden" Grid.Column="1" Background="White"  Margin="0 10 5 10" Click="ButtonHidden_Click" >
+            <Button x:Name="ButtonQ" Grid.Column="0" Background="White" Margin="5 10 5 10" Click="ButtonQ_Click">
+                <StackPanel>
+                    <TextBlock Text="?" FontSize="20"/>
+                </StackPanel>
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="20"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="ButtonExitMenu" Grid.Column="4" Content="✖" Background="White" FontSize="8" Margin="0 10 5 10" Click="ButtonExit_Click"/>
+            <Button x:Name="ButtonHidden" Grid.Column="2" Background="White"  Margin="0 10 5 10" Click="ButtonHidden_Click" >
                 <Image x:Name="ImageHidden" Source="Resources/free-icon-minimize-sign-6057365.png" Margin="5"/>
             </Button>
-            <Button x:Name="ButtonUnwrap" Grid.Column="2" Background="White"  Margin="0 10 5 10" Click="ButtonUnwrap_Click"  >
+            <Button x:Name="ButtonUnwrap" Grid.Column="3" Background="White"  Margin="0 10 5 10" Click="ButtonUnwrap_Click"  >
                 <Image Source="Resources/move.png" Margin="5"/>
             </Button>
 
-            <TextBlock Text="Главное меню" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="90 0 0 0" Grid.Column="0" Style="{StaticResource TitleFormat}"/>
+            <TextBlock Text="Главное меню" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30 0 0 0" Grid.Column="1" Style="{StaticResource TitleFormat}"/>
         </Grid>
 
         <Grid Grid.Row="1">
@@ -44,7 +55,7 @@
                 </StackPanel>
             </Button>
 
-            <Button x:Name="ButtonRules" Background="#308" Foreground="Gold"   Grid.Column="1" Grid.Row="2"  Margin="100, 20" Click="ButtonRules_Click">
+            <Button x:Name="ButtonRules" Background="#308" Foreground="Gold" Grid.Column="1" Grid.Row="2"  Margin="100, 20" Click="ButtonRules_Click">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Правила игры" Style="{StaticResource TextFormat}" Margin=" 20, 0, 20, 0"/>
                 </StackPanel>

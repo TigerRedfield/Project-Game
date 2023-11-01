@@ -234,5 +234,8 @@
   <ItemGroup>
     <Resource Include="Resources\move.png" />
   </ItemGroup>
+  <ItemGroup>
+    <SplashScreen Include="Resources\StartQuiz.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -19,8 +19,8 @@
 
         <Grid Grid.Row="0" Background="CornflowerBlue">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="0.08*"/>
+                <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="0.08*"/>
                 <ColumnDefinition Width="0.08*"/>
             </Grid.ColumnDefinitions>
@@ -28,7 +28,7 @@
             <Button x:Name="ButtonHidden" Grid.Column="2" Background="White"  Margin="5" Click="ButtonHidden_Click" >
                 <Image x:Name="ImageHidden" Source="Resources/free-icon-minimize-sign-6057365.png" Margin="5"/>
             </Button>
-            <Button x:Name="ButtonQ" Grid.Column="1" Background="White" Margin="5" Click="ButtonQ_Click" >
+            <Button x:Name="ButtonQ" Grid.Column="0" Background="White" Margin="5" Click="ButtonQ_Click" >
                 <StackPanel>
                     <TextBlock Text="?" FontSize="20"/>
                 </StackPanel>
@@ -38,7 +38,7 @@
                     </Style>
                 </Button.Resources>
             </Button>
-            <TextBlock Text="Правила игры"  Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource TitleFormat}"/>
+            <TextBlock Text="Правила игры"  Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource TitleFormat}"/>
         </Grid>
 
         <Grid Grid.Row="1">

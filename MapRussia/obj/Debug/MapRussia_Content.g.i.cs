@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("iconquiz.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/startquiz.png")]
 
 
