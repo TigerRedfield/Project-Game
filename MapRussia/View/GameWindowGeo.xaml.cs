@@ -628,8 +628,23 @@ namespace MapRussia.View
        
         }
 
+        private void ButtonExit_Click(object sender, RoutedEventArgs e)
+        {
 
-        
+            if (MessageBox.Show("Вы точно хотите выйти из текущей игры?", "Предупреждение", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                Application.Current.MainWindow.Visibility = System.Windows.Visibility.Collapsed;
+                this.Close();
+                //do something
+            }
+
+        }
+
+        private void ButtonHidden_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
     }
 }
 

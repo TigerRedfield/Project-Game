@@ -50,6 +50,7 @@ namespace MapRussia.View
             View.GameWindow gameWindow = new View.GameWindow();
             gameWindow.CreatePlayers(CheckPlayer1.IsChecked == true, TextBoxPlayer1.Text, CheckPlayer2.IsChecked == true, TextBoxPlayer2.Text, CheckPlayer3.IsChecked == true, TextBoxPlayer3.Text, CheckPlayer4.IsChecked == true, TextBoxPlayer4.Text);
             this.Hide();
+            Application.Current.MainWindow.Hide();
             gameWindow.ShowDialog();
             this.Show();
         }
@@ -181,7 +182,7 @@ namespace MapRussia.View
 
         private void ButtonBack_Click(object sender, RoutedEventArgs e)
         {
-            
+            Application.Current.MainWindow.Show();
             this.Close();
         }
 
@@ -190,6 +191,7 @@ namespace MapRussia.View
             View.GameWindowGeo gameWindowGeo = new View.GameWindowGeo();
             gameWindowGeo.CreatePlayers(CheckPlayer1.IsChecked == true, TextBoxPlayer1.Text, CheckPlayer2.IsChecked == true, TextBoxPlayer2.Text, CheckPlayer3.IsChecked == true, TextBoxPlayer3.Text, CheckPlayer4.IsChecked == true, TextBoxPlayer4.Text);
             this.Hide();
+           
             gameWindowGeo.ShowDialog();
             this.Show();
         }
@@ -239,6 +241,29 @@ namespace MapRussia.View
             gameWindowGeoFacts.ShowDialog();
             this.Show();
 
+        }
+
+        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
+
+        private void ButtonUnwrap_Click(object sender, RoutedEventArgs e)
+        {
+            if (WindowState == WindowState.Normal)
+            {
+                this.WindowState = WindowState.Maximized;
+
+            }
+            else
+            {
+                this.WindowState = WindowState.Normal;
+            }
+        }
+
+        private void ButtonHidden_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
         }
     }
 }

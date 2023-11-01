@@ -25,9 +25,14 @@ namespace MapRussia
             InitializeComponent();
         }
 
+
         private void ButtonExit_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            //Предупреждение о том, что пользователь выйдет из приложения
+            if (MessageBox.Show("Вы точно хотите закрыть приложение?", "Внимание!", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                Application.Current.Shutdown(); //Полное закрытие приложения
+            }
         }
 
         private void ButtonRules_Click(object sender, RoutedEventArgs e)
@@ -45,6 +50,29 @@ namespace MapRussia
             settingsGame.ShowDialog();
             this.Show();
 
+        }
+
+        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
+
+        private void ButtonUnwrap_Click(object sender, RoutedEventArgs e)
+        {
+            if (WindowState == WindowState.Normal)
+            {
+                this.WindowState = WindowState.Maximized;
+
+            }
+            else
+            {
+                this.WindowState = WindowState.Normal;
+            }
+        }
+
+        private void ButtonHidden_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
         }
     }
 }

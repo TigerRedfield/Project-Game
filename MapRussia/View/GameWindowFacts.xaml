@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MapRussia.View"
         mc:Ignorable="d"
-                 Title="Интерактивная игра &quot;Что я знаю о России?&quot;" Height="950" Width="1100" WindowState="Maximized" Loaded="Window_Loaded" >
+                 Title="Интерактивная игра &quot;Что я знаю о России?&quot;" Height="950" Width="1100" WindowState="Maximized" Loaded="Window_Loaded" ResizeMode="NoResize" WindowStyle="None" >
 
     <Grid Background="Coral">
         <Grid.RowDefinitions>
@@ -15,7 +15,16 @@
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0" Background="CornflowerBlue">
-            <TextBlock Text="Игровое окно (вопросы по интересным фактам)"  Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource TitleFormat}"/>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="0.08*"/>
+                <ColumnDefinition Width="0.08*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Игровое окно (вопросы по интересным фактам)"  Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource TitleFormat}"/>
+            <Button x:Name="ButtonExit" Grid.Column="2" Content="✖" Background="White" Margin="10 5 10 5" Click="ButtonExit_Click"/>
+            <Button x:Name="ButtonHidden" Grid.Column="1" Background="White"  Margin="10 5 10 5" Click="ButtonHidden_Click" >
+                <Image x:Name="ImageHidden" Source = "Resources/free-icon-minimize-sign-6057365.png" Margin="10 5 10 5"/>
+            </Button>
         </Grid>
         <Grid Grid.Row="1">
             

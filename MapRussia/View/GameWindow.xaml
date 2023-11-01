@@ -5,16 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MapRussia.View"
         mc:Ignorable="d"
-        Title="Интерактивная игра &quot;Что я знаю о России?&quot;" Height="950" Width="1100" WindowState="Maximized" Loaded="Window_Loaded" >
+        Title="Интерактивная игра &quot;Что я знаю о России?&quot;" Height="950" Width="1100" WindowState="Maximized" Loaded="Window_Loaded" ResizeMode="NoResize" WindowStyle="None" >
 
     <Grid Background="Coral">
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
-   
         </Grid.RowDefinitions>
+        
         <Grid Grid.Row="0" Background="CornflowerBlue">
-            <TextBlock Text="Игровое окно (вопросы по всем темам)"  Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource TitleFormat}"/>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="0.08*"/>
+                <ColumnDefinition Width="0.08*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Игровое окно (вопросы по всем темам)"  Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource TitleFormat}"/>
+            <Button x:Name="ButtonExit" Grid.Column="2" Content="✖" Background="White" Margin="10 5 10 5" Click="ButtonExit_Click"/>
+            <Button x:Name="ButtonHidden" Grid.Column="1" Background="White"  Margin="10 5 10 5" Click="ButtonHidden_Click" >
+                <Image x:Name="ImageHidden" Source = "Resources/free-icon-minimize-sign-6057365.png" Margin="10 5 10 5"/>
+            </Button>
         </Grid>
 
         <Grid Grid.Row="1">
@@ -96,9 +105,9 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="But1"  Grid.Column="0" Content="TextFormat" Background="#308" Foreground="Gold" Style="{StaticResource TextFormatBut}" Margin="20" Click="checkAnswerEvent" Tag="1"/>
-                <Button x:Name="But2"  Grid.Column="1" Content="TextFormat" Background="#308" Foreground="Gold" Style="{StaticResource TextFormatBut}" Margin="20" Click="checkAnswerEvent2" Tag="2"/>
-                <Button x:Name="But3"  Grid.Column="3" Content="TextFormat" Background="#308" Foreground="Gold" Margin="20" Click="checkAnswerEvent3" Tag="3" Style="{StaticResource TextFormatBut}"/>
+                <Button x:Name="But1"  Grid.Column="0" Content="TextFormat" Background="#308" Foreground="Gold" Style="{StaticResource TextFormatBut}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="20" Click="checkAnswerEvent" Tag="1"/>
+                <Button x:Name="But2"  Grid.Column="1" Content="TextFormat" Background="#308" Foreground="Gold" Style="{StaticResource TextFormatBut}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="20" Click="checkAnswerEvent2" Tag="2"/>
+                <Button x:Name="But3"  Grid.Column="3" Content="TextFormat" Background="#308" Foreground="Gold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="20" Click="checkAnswerEvent3" Tag="3" Style="{StaticResource TextFormatBut}"/>
                 <Button x:Name="But4"  Grid.Column="1" Content="Ответить" Background="#308" Foreground="Gold" Style="{StaticResource TextFormatBut}" Margin="20" Click="checkAnswerEvent4" Tag="2"/>
             </Grid>
 

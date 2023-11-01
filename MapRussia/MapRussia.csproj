@@ -204,5 +204,35 @@
   <ItemGroup>
     <Resource Include="iconQuiz.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Resources\free-icon-minimize-sign-6057365.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\free-icon-minimize-sign-6057365.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Resources\minisize-browser_icon-icons.com_55574.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\minisize-browser_icon-icons.com_55574.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Resources\png-clipart-computer-icons-window-window-angle-furniture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\png-clipart-computer-icons-window-window-angle-furniture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\png-transparent-computer-icons-iphone-novokuznetsk-window-angle-furniture-text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Resources\png-transparent-computer-icons-iphone-novokuznetsk-window-angle-furniture-text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Resources\move.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\move.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

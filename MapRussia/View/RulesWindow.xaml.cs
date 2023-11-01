@@ -28,5 +28,25 @@ namespace MapRussia.View
         {
             this.Close();
         }
+
+        private void ButtonQ_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Игра была разработана при участии следующих студентов 403 группы:\nВасильев Даниил\nЕмельянцев Никита\nЧерник Константин\n\nv.1.00");
+        }
+
+        private void ButtonExitMenu_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ButtonHidden_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
     }
 }
